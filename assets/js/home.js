@@ -1,7 +1,14 @@
 /**
- * @license MIT
- * @copyright 2023 codewithsadee
- * @author codewithsadee <mohammadsadee24@gmail.com>
- */
+ * home page search */
+const $searchFeald=document.querySelector("[data-search-field]")
+const $searchBtn=document.querySelector("[data-search-btn]")
 
-"use strict";
+console.log("hello this is second web ")
+
+$searchBtn.addEventListener("click",()=>{
+    if($searchFeald.value) window.location=`/recipes.html?q=${$searchFeald.value}`
+})
+
+$searchFeald.addEventListener("keydown",e=>{
+    if(e.key==="Enter") $searchBtn.click()
+})
